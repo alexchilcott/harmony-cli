@@ -2,8 +2,8 @@
 var harmony = require('harmonyhubjs-client')
 var output = require('../../output');
 
-exports.command = 'list';
-exports.desc = 'Get the list of available activities';
+exports.command = 'turn-off';
+exports.desc = 'Send the power down command.';
 exports.builder = function(yargs) {
   return yargs
     .demand('ip')
@@ -13,8 +13,7 @@ exports.builder = function(yargs) {
 exports.handler = function(argv) {
   harmony(argv.ip)
     .then(client => {
-      client.getActivities()
-        .then(activities => output.write(activities))
+      client.turnOff()
         .then(() => client.end());
     });
 };
