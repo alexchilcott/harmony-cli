@@ -17,7 +17,8 @@
     "debug": "^2.2.0",
     "harmonyhubjs-client": "^1.1.8",
     "harmonyhubjs-discover": "^1.0.2",
-    "q": "^1.4.1"
+    "q": "^1.4.1",
+    "yargs": "git+ssh://git@github.com/yargs/yargs.git#5904d5c"
   },
   "devDependencies": {
     "chai": "^3.5.0",
