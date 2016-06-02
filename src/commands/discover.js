@@ -17,6 +17,7 @@ exports.handler = function(argv) {
 
   var discover = new HarmonyHubDiscover(61991)
   discover.on('online', function(hub) {
+    debugger;
     discoveredHubs.push(hub);
   })
   discover.start()
